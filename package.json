@@ -1,0 +1,59 @@
+{
+  "name": "todotxt-parse",
+  "version": "0.0.0",
+  "description": "Parse todo.txt strings",
+  "license": "MIT",
+  "repository": "willyb321/todotxt-parse",
+  "author": {
+    "name": "Willyb321",
+    "email": "wbwilliam7@gmail.com"
+  },
+  "keywords": [
+    "todo",
+    "txt",
+    "text",
+    "todo.txt"
+  ],
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib && rimraf coverage",
+    "prepublish": "npm run build",
+    "prebuild": "npm run clean && echo Using TypeScript && tsc --version",
+    "build": "tsc --pretty",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "watch": "npm run build -- --watch",
+    "watch:test": "jest --watch"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.0.0",
+    "@types/lodash": "^4.14.91",
+    "@types/node": "^8.0.0",
+    "@types/rimraf": "^2.0.2",
+    "coveralls": "^3.0.0",
+    "jest": "^22.0.4",
+    "jest-environment-node-debug": "^2.0.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.0.0",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.0-dev.20171230"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testEnvironment": "node"
+  }
+}
