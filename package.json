@@ -1,6 +1,6 @@
 {
   "name": "todotxt-parse",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Parse todo.txt strings",
   "license": "MIT",
   "repository": "willyb321/todotxt-parse",
